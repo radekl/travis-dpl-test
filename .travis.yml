@@ -13,3 +13,4 @@ deploy:
     stack_name: "travis-cloudformation-test"
     on:
       branch: cloudformation
+

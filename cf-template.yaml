@@ -1,0 +1,42 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Cloudformation example stack
+
+Parameters:
+  ResourcePrefix:
+    Description: Resources prefix
+    Type: String
+
+Resources:
+  InputQueue:
+    #AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: !Sub "${ResourcePrefix}-input"
+
+  OutputTopic:
+    #AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html
+    Type: "AWS::SNS::Topic"
+    Properties:
+      TopicName: !Sub "${ResourcePrefix}-output"
+
+  InputOutputSubscription:
+    #AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html
+    Type: "AWS::SNS::Subscription"
+    Properties:
+      Endpoint: !GetAtt InputQueue.Arn
+      Protocol: sqs
+      TopicArn: !Ref OutputTopic
+
+Outputs:
+  InputQueueArn:
+    Description: ARN of input queue
+    Value: !GetAtt InputQueue.Arn
+
+  OutputTopicArn:
+    Description: ARN of output topic
+    Value: !Ref OutputTopic
+
+  InputOutputSubscriptionArn:
+    Description: ARN of input/output subscription
+    Value: !Ref InputOutputSubscription

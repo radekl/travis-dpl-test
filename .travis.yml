@@ -1,0 +1,15 @@
+deploy:
+  - provider: cloudformation
+    edge:
+      source: radekl/travis-dpl
+      branch: cloudformation
+    filepath: cf-template.yaml
+    access_key_id:
+      secure: "wCYKq6LpCPKq1j+dHFx1gX5Zr4WIKzn1DeECFBMJ69dg6s8yAQ2by2a3LO3p6s8i/fT/pBvXsxb/m3AdlUlfXYR3TEFArGA6R9ze+RhM0ujdEKtM0a6TObSUshA39pfxFxmXjgDBACmwYk/MlQp+CP7EfuwoJ2dhpLRlZXa4V1NBlJ/3SCc7VIDWWymyxep4FeerorDc5P4LlaLRk6j3V6OAaTlzpCeA6iBwLUkcbU1DEewIkPhExxDwPYNspSftDUfo/jTww+09B6GBCJgIl2jYUKa9hGm1GWrVAPhNMZm15IiG9S7VB/7G0QHEZBUOi613sXEAkqp+5kvNgEDSTI+5nVplVTRu+6Jd8/QFOm27UC9KWyWUISPm3Wug/56rTptZO2/caxf1GTdEdzMgwqHObmiH/wmEvRkJBkp8I7oF+2bdwkCJGkv3WK9kOXejv7uFW3HF2wG/QYXWPTAAmf2mbikme+kjj/Rn4N7jdKHZQb0lN62sOzzk5i6ZyNbl01anaj45mUjFjS09CBAiEsTspntqtT94u+9nnK6OWH5Olm7XuJF58TZBbtzA8NPQXS09rV8qxPFunEhn8wVnovh/9VcY+kN4A6MKeCMMFyIEZvbWyXOveOze075YjyBepZwX3dXmw/e1SsJpBCu4YkPuUEUNzaIUokStdBSLkN0="
+    secret_access_key:
+      secure: "hIJsMWDg7XwYsIAYlozr8w3iM1Lrq86hjrai0OGkV++PdFDJS+2Y+2CPMcksM/kHZaZaIil/qQvRkFA5JBkmURhG+SNHUJ8xtpeuMhliKxTMohu6FFB/7A/CmrEazRLEGrdq3cr0btE9GW2FOQHL1tCiC9GiHGaPGYtzPj8gaOb97AxHvFehn5K1m3EfN5UXhpDNerjE3dhfti43kXeWT3bAu55myUWlML72m+J1hA0gCs9ecggnq0tR1m5kALMgR/JGy0cO1WX7EZg9SGzdbkUjaYgihhubc8/Ss06djyRde5hFhSAcOXN1RaeKhXbs7KA3jZTuRs623L5Y3iF70qgv/mKWomJDVfHUWkI+0/mYADTQ8fHnUGCP5HyqApIDrCxLdyvuqHhR8YMbXtyrA/n7fVt3dbn2EXiW7I5hd4+4E2SDR3Cx785oU5ja8PRWLEf9N1l+03vUtcDno7TD0LrQL/UgctK9LbdEaDxELTS5VmM/L484rAXgNnbX5dTTj+KgStROH1XTaSuJZtzzDPt1OsuH6tQueEzRyRqj+CM75KGXeuSJx5VQ4PktM1ivui8UVQXo90jFon/B6x1thIrB0RfD9gxHcgC+2lM0yig6uHkzkX7dQLSyCgIaU8K1qsdbHX6TbW1N+owzh9/qfaXAI6vshvbsZZ2rU4SVsmk="
+    parameters:
+      - ResourcePrefix=example-stack-prefix
+    stack_name: "travis-cloudformation-test"
+    on:
+      branch: cloudformation

@@ -11,7 +11,7 @@ deploy:
     secret_access_key:
       secure: "t0f9nLOJqm5tusicaaw4B2x0+jzw0ojFnCzTTHjGxb5QAF8CRaA+mjRx5MZ06DXzHXRy2OiyOVSbcrJIlSc3gBtybBTQbX/E15SsasoaEb9JhUSduCOVO0F2/NBXkUlyhAmsr5gEI7e0aE6ltiO9PSb+9NHFDAqpt4fnJGmG0+7STPK+g1epOlRSUdVbFodZdfshwlZwtg0fJlJhKAdtN3H2fnommDotfdleYU/j1BK8SAlrkL28V1pGvcjkTxlWqYCtt5D3HD2OW34dO1ck2Jq62WKTOzu6dY3j52FO5hwkfezKMBIdJnzAsQ26o+lbWckcHZVgdRZteW3/FFbYNk+T4eLObrJLukSCQwybzTlNvu+0bgRKzTts+/KKuWaAWc0jKdEYwPoyJQFTAyHa95Z3rLy3IhCLiU0jGoK488Mk+bKbKiNnGxvi/a3mDqDgI4mFRX22+W7XPmJEMwGGYTkZu7SGMBT/aczIgKLjcM6qVnXIDrQ4k2p4WFoxaiM+7GEGNMKjBIuFdsLLnNGyXbaPV0bGfJ6HsNmIT7FENnTAVvz4xqJRUBv54zDAQw8g6XTjO7hfgma3NFI//bjJs9N6LL68uhlZxNYaQZSnMCSYSY5lIsVxf3cEuJ/0RQdyUr6OEXBF2c7vC1zd+M2uPzYyPpFXBO3gLSUJBXR573I="
     parameters:
-      - ResourcePrefix=example-stack-prefix
+      - ResourcePrefix=example-stack-csu
     stack_name: "travis-cloudformation-test"
     on:
       branch: cloudformation

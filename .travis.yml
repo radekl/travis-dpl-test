@@ -1,0 +1,17 @@
+language: generic
+
+deploy:
+  - provider: convox
+    edge:
+      source: radekl/travis-dpl
+      branch: convox
+    password:
+      secure: "u9uz29m/4LAulM36vciSGOlGBo8jESlpCJi7KWM0RCaOns2BSHKXw/QjD4iYh78H4/G2E97RHoct8W6EtyEwV+pFqO9RaEKVSHsUsw0sLA/iEwE1fQFOnU3VKotNiT3FBC+l+pkjDk1Jm8UvuKDPuVnqKH7rHLnnccgUWAEEEtMOr5xGvis4s0so0DL+6xUu2Oa1LeY8mOC8e6u1D8hGdYMYy68vdWS9AJsFrLyEYKEYwKP+qKaQMsUHWsc2jAc7mA61DKl6nU4rXxQ/FFdE5nTQwshA9A1MVtb9vFwehppXUkq1Vi0F9NLRo8CeOFkuYSjcdTYW61mF4uKjTdq/qI2dgMmjVVZTp2eXYA9weSQuBVef8UpZdm2NjH9tlM0H7s5GO32mZXnV6fn5Ars+iT06Vxha6As/QsdoFeks3DGX64jtZmy5yDygU9gYnX0sjR0AcG5oaVK1ObK4Dh4bM25CRUWtYpl/r23XGKha6UIHqvZff7avm9slk4tQCQ0jFyCU76UGnwRdry8zkZBL4gI1x44RMMrJekQLHEqMfhNcsijiI9nISQt3NcxxYDzTORcueQvlgcR83JSbZZyG7UWZrB+7xNKiehItJcrvybftTj+3iN4Xmh/JkTSrvspviBCu6Fx26qkUWBTedo8/cWn3ydg/vw0y8WDmRmnCG4A="
+    rack: demo/example
+    app: my-example-app
+    promote: true
+    environment:
+      - ENV=demo
+      - HELLO_MESSAGE=Hello there!
+    on:
+      branch: convox

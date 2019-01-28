@@ -1,0 +1,7 @@
+services:
+  web:
+    build: .
+    environment:
+      - "*"
+    health: /health
+    port: 5000

@@ -10,6 +10,7 @@ deploy:
     rack: demo/example
     app: my-example-app
     promote: true
+    create: true
     environment:
       - ENV=demo
       - HELLO_MESSAGE=Hello there!

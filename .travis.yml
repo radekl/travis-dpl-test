@@ -3,8 +3,7 @@ language: generic
 deploy:
   - provider: cloudformation
     edge:
-      source: radekl/travis-dpl
-      branch: cloudformation
+      branch: master
     filepath: cf-template.yaml
     access_key_id:
       secure: "qn42chhqqYX3FjwuV6zHUhOt/AaH7LSCgmpfZoAVhGxg3OPwjo6SaU+3a+55J7Lzo21ScfiVII4oTGlkqY1zc6nQcJXv9AVuDUP2dpxLisp3kCGGcEmaMUubOMRxpKCfL8jfbHnU5MT48nPn+/4+eSJyhM6L6+Iv6livNQzyUorEBC9+BN3s2V/zWTvZFZnV4WKX+0RvDVnSpHZvT57PCWwbHtuefVFYPeKPlG6fcU8hi+yBJycrwTXTQnWLLuSow0jhe1ei8zSIKFSqecdKs/1OcoIsBVmCDirdF0wOrANNOrN5PmwOisvIL2sleDW4eHpI3q2pVU62uzpUnI+mA3QTd9qxbYpZ918sJ2ydKZLF1u9kkV0lEXqGs9T6GLMiEBJW7Htr9wculGtYDQDKrr6oiArHQJdHlGRoa60Iu8gJz+uB97ldR9qvofIOHtl5lE6OfvlDJ7pij/NI/hI6ug0slaJGFCnye5Dq0oHRTu8yK1PWnXNsVcMZuEH/bjsvOCCK5vUAoSIXp5LUTtma6FpUzgqaRjgXOdT97L+1nPm9spZ1k+ZjoeSkOigkTp1bQ2JvQr2uBxmkm0Q59rM0qBlFsJ7UmbpjBTF1lzh19kh3AclHhiZgKTPwvK+XY22i0MQZbqEjJFmI14NFpvQeMwFLTr3FYAvrGRqMY2rYGPg="

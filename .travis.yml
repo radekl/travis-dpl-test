@@ -3,6 +3,7 @@ language: generic
 deploy:
   - provider: cloudformation
     edge:
+      repo: radekl/travis-dpl
       branch: sf-port-951
     template: cf-template.yaml
     access_key_id:

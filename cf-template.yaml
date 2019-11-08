@@ -20,7 +20,7 @@ Resources:
       Tags:
         - Key: example
           Value:
-            Fn::Select: [0, ListOfItems]
+            Fn::Select: [0, !Ref ListOfItems]
 
   OutputTopic:
     #AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html

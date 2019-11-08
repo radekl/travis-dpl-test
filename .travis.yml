@@ -3,8 +3,7 @@ language: generic
 deploy:
   - provider: cloudformation
     edge:
-      source: radekl/travis-dpl
-      branch: sf-port-951
+      branch: cloudformation-fix-sep
     template: cf-template.yaml
     access_key_id:
       secure: "vTfBs0imPeDjXUVcDvrBnhMT39kbGCvew3yQP3pYsDqSXbWMoRR8rDXNbTAZp6cgstakxKutf0dpUQegpJcheQrG9HzcZAxEz49m+IHZlSe/2lLEepUapqzu/vjXB9rHP/yuM9EESJ9dKqcYLA+CFVg382nlliQq9iT38wMo8d3A6Cbq+fVlsfnb3qj/vmZFEUbIK8ZZMHk8OJqKBFcvr+khtbXxib+BzGjZDAuZdF9z8gH7hQBp0VhXsRxdHkPM8zmDciB0FRcUrACeQWTn4ioIrt5kV5FFH266vTAjKQR5VZfxcPbNUSy9ouwpBoLQRA/AUDTC5YyIcKYNs33J6ae3Oe9Wp8W2eOQdEelAq4x9cWhFlxje3CBIJ1RfPonbpwbiago5Ac+spWYqFaa82CACCVdSxMLJTxZ7NkaUhQI/0WM0nozh8O77jaNWBOBLfWz/4rYVbgcLwq9584diMeMBnsM1NcKw6kJjJcDS+whUCJEFr6rQv8zaw3qgT+nxCihMcT7gyfRK12VnDJaemyKqAtKlfoKNoGErRolcpxx7oygCkLYk9E+J3qcHiVc0z1YHSIYqYPc1R3VBw3kdbVpLrZoJdqRUtRLGzIqHkaAab2b81V3bNbFmVspraZfotLsvY/nDD/h6kKjhigdu22wqUrbt/V/jIYCCXsPZxQA="
@@ -12,6 +11,7 @@ deploy:
       secure: "eT9//yJ+cOd4lDnMPwa+YhOQ9oPiLToPXw88eEyH0U7tw83jp1YX7RUQg+Du5QjMypw8D25ekIZCGzH3/s1gJYK2xN21wCsEt3FHa7uFozxWmx86h/RgKLMhHUlfMMmx9WaJxc8dOrF6wOJI8I8329ksWd/qKCBMiK8QA1+I38Q08qExfrwPelu4s5NXhNDn07Fr8nscatwZq/Um80gJ2XNTJFJXZfNSszi6IdqffFkUNjFUA7aVXiwyOd3uY7Z+Dgdz7fOYsjpuzwwrEwmB4r8qx5CbLM/AXLOjY4TY5VG4FqBodhwh45nKNvKI0GzfkO83yri/C772yWlAmejK2WQcYt2KpOI53LF2eS6Kq3K9nKVPpmaovFsghpCohDCUHG1CYUEvVUjJo7wNS/QHgPIud0pqabRJe5nGx6ULSkxTw4sSOpWUN+1BMpI82tlUorKqqh7KoGdpjcqhlaQfXfqCSldObku+pXy9bsCZHf1GCAIpYamUn+eosVQcXyazHDIYCft4z1ys0IPakCc754Ns43NLUZ73oP5U75biZT1pMfAGGO/Tef1cCoayC0QFvhZc8Iyg9a9/XDKU8JC80HfXBvcEnf0Lh1COgtQK9U0d+0V93f6X49avwTSNw50m1R6oepR3Z/JcCjnbNVBd2soEt6zTAhJD312kYzyC/2g="
     parameters:
       - ResourcePrefix=example-stack-test
+      - ListOfItems=some,list,of,items,commadelimited
     stack_name: "travis-cloudformation-test"
     promote: true
     on:
